@@ -11,59 +11,41 @@
 Входные данные представлены следующим образом. В первой строке задаётся число N – общее количество показаний прибора. Гарантируется, что N > 9. В каждой из следующих N строк задаётся одно положительное целое число – очередное показание прибора.
 Рассчитать метрики Холстеда.
 
-**Ключевые слова:** *Javascript, РГУ, МКПО*
+**Ключевые слова:** *Pascal/Delphi, РГУ, МКПО*
 
-**Выполнение:** В качестве программы было разработано консольное приложение на языке программирования Javascript по варианту задания 3.
+**Выполнение:** В качестве программы было разработано консольное приложение на языке программирования Pascal/Delphi по варианту задания 3.
 
 #### Программный код
 
-```javascript
-function taskB(parN) {
-    let n = parN,
-        min = 1000,
-        minp = 1000 * 1000;
-    let a = [];
-
-    console.log("n = " + n);
-
-    for (let index = 1; index < 9; index++) {
-        a[index] = randomInteger(1, 1000);
-    }
-    for (let index = 9; index < n; index++) {
-        a[index] = randomInteger(1, 1000);
-        if ((a[1] % 2 == 1) && (a[1] < min)) {
-            min = a[1];
-        } else if ((min * a[9] < minp) && (min * a[9] % 2 == 1)) {
-            minp = minp * a[9];
-        }
-
-        for (let j = 1; j < 6; j++) {
-            a[j] = a[j + 1];
-        }
-    }
-    if (minp % 2 == 0) {
-        return console.log('-1');
-    } else {
-        return console.log(minp);
-    }
-}
-
-function randomInteger(min, max) {
-    let rand = min - 0.5 + Math.random() * (max - min + 1);
-    return Math.round(rand);
-}
-
-function main() {
-    taskB(randomInteger(9, 10000));
-    return "Вычислено";
-}
-
-console.log(main())
+```pascal
+const dlina = 9;
+var N: integer;
+a: array[0..dlina-1] of integer;
+max, m, mEven, x, j, i: integer;
+begin
+readln(N);
+for j:=0 to dlina-1 do read(a[j]);
+max:= -1;
+m:= -1; mEven:= -1;
+for j:= dlina to N-1 do begin
+	read(x);
+	if ((a[j mod dlina] mod 2 = 0) and
+	(a[j mod dlina] > mEven)) then mEven:= a[j mod dlina];
+	if (a[j mod dlina] > m) then m := a[j mod dlina];
+	if x mod 2 = 1 then begin
+		if x*mEven > max then max := mEven*x;
+	end
+	else
+	if x*m > max then max := m*x;
+	a[j mod dlina]:=x;
+end;
+writeln(max)
+end.
 ```
 
 #### Результат работы программы
 
-![Картинка](https://cdn1.savepice.ru/uploads/2020/6/22/838f0634c8915533f95e2b0cc24bbe5c-full.png "Результат работы программы")
+![Картинка](https://cdn1.savepice.ru/uploads/2020/6/24/5c4f1434cdb58a8f9244848cb80d0c23-full.png "Результат работы программы")
 
 #### Рассчет метрик Холстеда ####
 
