@@ -51,35 +51,29 @@ end.
 
 Номер строки | Словарь операторов *n1* | Словарь операндов *n2*    | Общее число операторов *N1*  | Общее число операндов *N2*       |
 :----:|--------------------------------|---------------------------|------------------------------|----------------------------------|
-1     |function, taskB                 | parN                      | function, taskB              |parN                              |
-2     | =                              | n                         | =                            |n, parN                           |
-3     |                                | min, 1000                 | =                            |min, 1000                         |
-4     |                                | minp                      | =                            | minp, 1000, 1000                 |
-5     | []                             | a                         | = , []                       | a                                |
-6     | call                           | "n ="                     | call, +                      |"n =", n                          |
-7     | for, ;, <, ++                  | index, 9, 1               | for, =, ;, ;, <, ++          |index, 1, 9, n, index, index      |
-8     |                                | randomInteger,            | =, [], ;                     | randomInteger, index, a, 1, 1000 |
-9     |                                | index, 9, n               | for, =, ;, ;, <, ++          |index, 9, n, index, index         |
-10    |                                |                           | =, [], ;                     | randomInteger, index, a, 1, 1000 |
-11    | if, ==, %, &&                  | 2                         | if, [], ==, %, &&, <, []     | a, index, 1, 2, min, 1, a        |
-12    | =, []                          |                           | =, []                        | min, a, 1                        |
-13    | else if, *                     |                           | else if, *, [], <, &&, %, ==, *, []  | min, a, 9, minp, 2, 1, min, 9  |
-14    |                                |                           | =, *, []                     | minp, min, a, 9                 |
-15    |                                | j, 6                      |for, =, ;, <, ++              | j, 1, 6                         |
-16    |                                | a, j, 1                   |[], =, +                      | a, j, 1, j, a                   |
-17    |                                | "k="                      | [], =, +                     |"k=", k                          |
-18    |                                |                           | if, %, ==                    |  minp, 2, 0                     |
-19    | return                         | '-1'                      | return, call                 | '-1'                            |
-20    | else                           |                           | else                         |                                 |
-21    |                                |                           | return, call                 | minp                            |
-23    |                                |                           |function                      |  call, min, max                 |      
-24    |                                | rand, 0.5                 |=, -, +, *, call, -, +        |  rand, min, 0.5, max, min       | 
-25    |                                |                           |return, call                  |  rand                           | 
-26    |                                | main                      |function                      |  main                           | 
-27    |                                | 10000                     | call, call                   |  9 , 10000                      | 
-28    |                                | "Вычислено"               | return                       |  "Вычислено"                    | 
-29    |                                |                           | call, call                   |                                 | 
-Кол-во| 20                             | 27                        | 85                           | 79                              |
+1     | =                              | dlina, 9                  | =                            | dlina,                           |
+2     | :                              | N, integer                | :                            | N, integer                       |
+3     | .., -, [], of                  | a, array, 0, 1            | .., -, [], of, :             | a, array, 0, 1, integer, dlina   |
+4     |                                | max, m, mEven, x, j, i    | :                            | max, m, mEven, x, j, i, integer  |
+5     | begin                          |                           | begin                        |                                  |
+6     | readln                         | N                         | readln                       | N                                |
+7     | for, to, do, read, :=          |                           | for, to, do, read, :=, -, [] | j, dlina, N, 1, j, a             |
+8     |                                |                           | :=, -                        | max, 1                           |
+9     |                                |                           | :=, :=,-,-                   | m, mEven, 1, 1                   |
+10    |                                |                           | call                         | x                                |
+11    | if, mod, and                   |                           | if, mod, and, [], =, mod     | a, j, dlina, 2, 0                |
+12    | then, >                        |                           | then, if, mod, :=, [], mod   | a, dlina, mEven, mEven, a, j, dlina      |
+13    |                                |                           | then, mod, :=, [], mod       | a, dlina, m, m, a, j, dlina      |
+14    |                                |                           | if, mod, then, call          | x, 2, 1                          |
+15    | *                              |                           | if, >, then, :=, *, *        | x, mEven, max, max, x, mEven     |
+16    | end                            |                           | end                          |                                  |
+17    | else                           |                           | else                         |                                  |
+18    |                                |                           | if, >, then, :=, *, *        | x, mEven, m, m, x, mEven         |
+19    |                                |                           | [], mod, :=.                 | a, j, dlina, x                   |
+20    | end                            |                           | end                          |                                  |
+21    | writeln                        |                           | writeln                      | max                              |
+23    |                                |                           | end                          |                                  |      
+Кол-во| 20                             | 27                        | 85                           | 79                               |
 
 #### Метрики Холстеда
 
