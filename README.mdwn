@@ -51,28 +51,23 @@ end.
 
 Номер строки | Словарь операторов *n1* | Словарь операндов *n2*    | Общее число операторов *N1*  | Общее число операндов *N2*       |
 :----:|--------------------------------|---------------------------|------------------------------|----------------------------------|
-1     |                                |                           |                              |                                  |
-2     |                                |                           |                              |                                  |
-3     |                                |                           |                              |                                  |
-4     |                                |                           |                              |                                  |
-5     |                                |                           |                              |                                  |
-6     | readln                         | N                         | readln                       | N                                |
-7     | for to do, :=, -, []           | j, dlina, N, 1, i, a      | for to do, call, :=, -, []   | j, dlina, N, 1, j, a             |
-8     |                                | max                       | :=, -                        | max, 1                           |
-9     |                                | m, mEven                  | :=, :=,-,-                   | m, mEven, 1, 1                   |
-10    |                                | x                         | call                         | x                                |
-11    | if, mod                        | 2, 0                      | if, mod, [], =, mod          | a, j, dlina, 2, 0                |
-12    | >.                             |                           | if, mod, :=, [], mod         | a, dlina, mEven, mEven, a, j, dlina      |
-13    |                                |                           | mod, :=, [], mod             | a, dlina, m, m, a, j, dlina      |
-14    | =                              |                           | if, mod, call, =             | x, 2, 1                          |
-15    | *                              |                           | if, >, :=, *, *              | x, mEven, max, max, x, mEven     |
-16    |                                |                           |                              |                                  |
-17    |                                |                           |                              |                                  |
-18    |                                |                           | if, >, :=, *, *              | x, mEven, m, m, x, mEven         |
-19    |                                |                           | [], mod, :=                  | a, j, dlina, x                   |
-20    |                                |                           |                              |                                  |
-21    |                                |                           | call                         | max                              |
-23    |                                |                           |                              |                                  |      
+1     | readln                         | N                         | readln                       | N                                |
+2     | for to do, :=, -, []           | j, dlina, N, 1, i, a      | for to do, call, :=, -, []   | j, dlina, N, 1, j, a             |
+3     |                                | max                       | :=, -                        | max, 1                           |
+4     |                                | m, mEven                  | :=, :=,-,-                   | m, mEven, 1, 1                   |
+5    |                                | x                         | call                         | x                                |
+6    | if, mod                        | 2, 0                      | if, mod, [], =, mod          | a, j, dlina, 2, 0                |
+7    | >.                             |                           | if, mod, :=, [], mod         | a, dlina, mEven, mEven, a, j, dlina      |
+8    |                                |                           | mod, :=, [], mod             | a, dlina, m, m, a, j, dlina      |
+9    | =                              |                           | if, mod, call, =             | x, 2, 1                          |
+10    | *                              |                           | if, >, :=, *, *              | x, mEven, max, max, x, mEven     |
+11    |                                |                           |                              |                                  |
+12    |                                |                           |                              |                                  |
+13    |                                |                           | if, >, :=, *, *              | x, mEven, m, m, x, mEven         |
+14    |                                |                           | [], mod, :=                  | a, j, dlina, x                   |
+15    |                                |                           |                              |                                  |
+16    |                                |                           | call                         | max                              |
+17    |                                |                           |                              |                                  |      
 Кол-во| 10                             | 13                        | 47                           | 53                               |
 
 #### Метрики Холстеда
